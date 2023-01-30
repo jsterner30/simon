@@ -32,15 +32,25 @@
             </menu>
         </nav>
     </header>
-        <h2>Player: </h2>
-        <h2>Score: </h2>
-        <button type="button">Reset</button>
-        <br/>
-        <button type="button"><img src="./img/green.png"></button>
-        <button type="button"><img src="./img/red.png"></button>
-        <br/>
-        <button type="button"><img src="./img/blue.png"></button>
-        <button type="button"><img src="./img/yellow.png"></button>
+    <main class="bg-secondary">
+        <div class="players">
+            Player:
+            <span class="player-name">Mystery player</span>
+        </div>
+        <div class="game">
+            <div class="button-container">
+                <button class="button-top-left"></button>
+                <button class="button-top-right"></button>
+                <button class="button-bottom-left"></button>
+                <button class="button-bottom-right"></button>
+                <div class="controls center">
+                    <div class="game-name">Simon<sup>&reg;</sup></div>
+                    <div class="score center">--</div>
+                    <button class="btn btn-primary">Reset</button>
+                </div>
+            </div>
+        </div>
+    </main>
     </body>
     <hr>
     <footer class="bg-dark text-dark text-muted">
