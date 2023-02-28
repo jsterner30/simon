@@ -1,0 +1,22 @@
+{
+  "name": "simon",
+  "version": "1.0.0",
+  "description": "This deliverable demonstrates the use of basic HTML elements for structure, basic formatting, input, output, links, and drawing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsterner30/simon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsterner30/simon/issues"
+  },
+  "homepage": "https://github.com/jsterner30/simon#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
