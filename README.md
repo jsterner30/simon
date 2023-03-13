@@ -1,3 +1,3 @@
-# simon-html
+# simon-login
 
-This deliverable demonstrates the use of basic HTML elements for structure, basic formatting, input, output, links, and drawing.
+This deliverable demonstrates authenticating users and storing credentials and authentication tokens in MongoDB.

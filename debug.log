@@ -1,0 +1,512 @@
+Listening on port 3000
+<ref *1> MongoClient {
+  _events: [Object: null prototype] {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  s: {
+    url: 'mongodb+srv://dallynsmith00:BKjYGmYBK6UCJayX@cluster0.ruueiiq.mongodb.net/?retryWrites=true&w=majority',
+    bsonOptions: {
+      raw: false,
+      promoteLongs: true,
+      promoteValues: true,
+      promoteBuffers: false,
+      ignoreUndefined: false,
+      bsonRegExp: false,
+      serializeFunctions: false,
+      fieldsAsRaw: {},
+      enableUtf8Validation: true
+    },
+    namespace: MongoDBNamespace { db: 'admin', collection: undefined },
+    hasBeenClosed: false,
+    sessionPool: ServerSessionPool { client: [Circular *1], sessions: [List] },
+    activeSessions: Set(0) {},
+    options: [Getter],
+    readConcern: [Getter],
+    writeConcern: [Getter],
+    readPreference: [Getter],
+    logger: [Getter],
+    isMongoClient: [Getter]
+  },
+  [Symbol(kCapture)]: false,
+  [Symbol(options)]: [Object: null prototype] {
+    hosts: [],
+    credentials: MongoCredentials {
+      username: 'dallynsmith00',
+      password: 'BKjYGmYBK6UCJayX',
+      source: 'admin',
+      mechanism: 'DEFAULT',
+      mechanismProperties: {}
+    },
+    compressors: [ 'none' ],
+    connectTimeoutMS: 30000,
+    directConnection: false,
+    metadata: {
+      driver: [Object],
+      os: [Object],
+      platform: 'Node.js v16.15.1, LE (unified)|Node.js v16.15.1, LE (unified)'
+    },
+    enableUtf8Validation: true,
+    forceServerObjectId: false,
+    heartbeatFrequencyMS: 10000,
+    keepAlive: true,
+    keepAliveInitialDelay: 120000,
+    loadBalanced: false,
+    localThresholdMS: 15,
+    logger: Logger { className: 'MongoClient' },
+    maxConnecting: 2,
+    maxIdleTimeMS: 0,
+    maxPoolSize: 100,
+    minPoolSize: 0,
+    minHeartbeatFrequencyMS: 500,
+    monitorCommands: false,
+    noDelay: true,
+    pkFactory: { createPk: [Function: createPk] },
+    raw: false,
+    readPreference: ReadPreference {
+      mode: 'primary',
+      tags: undefined,
+      hedge: undefined,
+      maxStalenessSeconds: undefined,
+      minWireVersion: undefined
+    },
+    retryReads: true,
+    retryWrites: true,
+    serverSelectionTimeoutMS: 30000,
+    socketTimeoutMS: 0,
+    srvMaxHosts: 0,
+    srvServiceName: 'mongodb',
+    writeConcern: WriteConcern { w: 'majority' },
+    waitQueueTimeoutMS: 0,
+    zlibCompressionLevel: 0,
+    dbName: 'test',
+    userSpecifiedAuthSource: false,
+    userSpecifiedReplicaSet: false,
+    srvHost: 'cluster0.ruueiiq.mongodb.net',
+    tls: true
+  }
+}
+Collection {
+  s: {
+    db: Db { s: [Object] },
+    options: {
+      raw: false,
+      promoteLongs: true,
+      promoteValues: true,
+      promoteBuffers: false,
+      ignoreUndefined: false,
+      bsonRegExp: false,
+      serializeFunctions: false,
+      fieldsAsRaw: {},
+      enableUtf8Validation: true,
+      writeConcern: [WriteConcern],
+      readPreference: [ReadPreference]
+    },
+    namespace: MongoDBNamespace { db: 'simon', collection: 'user' },
+    pkFactory: { createPk: [Function: createPk] },
+    readPreference: ReadPreference {
+      mode: 'primary',
+      tags: undefined,
+      hedge: undefined,
+      maxStalenessSeconds: undefined,
+      minWireVersion: undefined
+    },
+    bsonOptions: {
+      raw: false,
+      promoteLongs: true,
+      promoteValues: true,
+      promoteBuffers: false,
+      ignoreUndefined: false,
+      bsonRegExp: false,
+      serializeFunctions: false,
+      fieldsAsRaw: {},
+      enableUtf8Validation: true
+    },
+    readConcern: undefined,
+    writeConcern: WriteConcern { w: 'majority' }
+  }
+}
+<ref *1> MongoClient {
+  _events: [Object: null prototype] {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  s: {
+    url: 'mongodb+srv://dallynsmith00:BKjYGmYBK6UCJayX@cluster0.ruueiiq.mongodb.net/?retryWrites=true&w=majority',
+    bsonOptions: {
+      raw: false,
+      promoteLongs: true,
+      promoteValues: true,
+      promoteBuffers: false,
+      ignoreUndefined: false,
+      bsonRegExp: false,
+      serializeFunctions: false,
+      fieldsAsRaw: {},
+      enableUtf8Validation: true
+    },
+    namespace: MongoDBNamespace { db: 'admin', collection: undefined },
+    hasBeenClosed: false,
+    sessionPool: ServerSessionPool { client: [Circular *1], sessions: [List] },
+    activeSessions: Set(0) {},
+    options: [Getter],
+    readConcern: [Getter],
+    writeConcern: [Getter],
+    readPreference: [Getter],
+    logger: [Getter],
+    isMongoClient: [Getter]
+  },
+  topology: Topology {
+    _events: [Object: null prototype] {
+      topologyDescriptionChanged: [Array],
+      connectionPoolCreated: [Function (anonymous)],
+      connectionPoolReady: [Function (anonymous)],
+      connectionPoolCleared: [Function (anonymous)],
+      connectionPoolClosed: [Function (anonymous)],
+      connectionCreated: [Function (anonymous)],
+      connectionReady: [Function (anonymous)],
+      connectionClosed: [Function (anonymous)],
+      connectionCheckOutStarted: [Function (anonymous)],
+      connectionCheckOutFailed: [Function (anonymous)],
+      connectionCheckedOut: [Function (anonymous)],
+      connectionCheckedIn: [Function (anonymous)],
+      commandStarted: [Function (anonymous)],
+      commandSucceeded: [Function (anonymous)],
+      commandFailed: [Function (anonymous)],
+      serverOpening: [Function (anonymous)],
+      serverClosed: [Function (anonymous)],
+      serverDescriptionChanged: [Function (anonymous)],
+      topologyOpening: [Function (anonymous)],
+      topologyClosed: [Function (anonymous)],
+      error: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      close: [Function (anonymous)],
+      serverHeartbeatStarted: [Function (anonymous)],
+      serverHeartbeatSucceeded: [Function (anonymous)],
+      serverHeartbeatFailed: [Function (anonymous)]
+    },
+    _eventsCount: 26,
+    _maxListeners: undefined,
+    selectServerAsync: [Function (anonymous)],
+    bson: [Object: null prototype] {
+      serialize: [Function: serialize],
+      deserialize: [Function: deserialize]
+    },
+    s: {
+      id: 0,
+      options: [Object: null prototype],
+      seedlist: [Array],
+      state: 'connected',
+      description: [TopologyDescription],
+      serverSelectionTimeoutMS: 30000,
+      heartbeatFrequencyMS: 10000,
+      minHeartbeatFrequencyMS: 500,
+      servers: [Map],
+      credentials: [MongoCredentials],
+      clusterTime: [Object],
+      connectionTimers: Set(0) {},
+      detectShardedTopology: [Function: detectShardedTopology],
+      detectSrvRecords: [Function: detectSrvRecords],
+      srvPoller: [SrvPoller]
+    },
+    client: [Circular *1],
+    [Symbol(kCapture)]: false,
+    [Symbol(waitQueue)]: List { count: 0, head: [Object] }
+  },
+  [Symbol(kCapture)]: false,
+  [Symbol(options)]: [Object: null prototype] {
+    hosts: [
+      new HostAddress('ac-nhjj8oc-shard-00-00.ruueiiq.mongodb.net:27017'),
+      new HostAddress('ac-nhjj8oc-shard-00-02.ruueiiq.mongodb.net:27017'),
+      new HostAddress('ac-nhjj8oc-shard-00-01.ruueiiq.mongodb.net:27017')
+    ],
+    credentials: MongoCredentials {
+      username: 'dallynsmith00',
+      password: 'BKjYGmYBK6UCJayX',
+      source: 'admin',
+      mechanism: 'DEFAULT',
+      mechanismProperties: {}
+    },
+    compressors: [ 'none' ],
+    connectTimeoutMS: 30000,
+    directConnection: false,
+    metadata: {
+      driver: [Object],
+      os: [Object],
+      platform: 'Node.js v16.15.1, LE (unified)|Node.js v16.15.1, LE (unified)'
+    },
+    enableUtf8Validation: true,
+    forceServerObjectId: false,
+    heartbeatFrequencyMS: 10000,
+    keepAlive: true,
+    keepAliveInitialDelay: 120000,
+    loadBalanced: false,
+    localThresholdMS: 15,
+    logger: Logger { className: 'MongoClient' },
+    maxConnecting: 2,
+    maxIdleTimeMS: 0,
+    maxPoolSize: 100,
+    minPoolSize: 0,
+    minHeartbeatFrequencyMS: 500,
+    monitorCommands: false,
+    noDelay: true,
+    pkFactory: { createPk: [Function: createPk] },
+    raw: false,
+    readPreference: ReadPreference {
+      mode: 'primary',
+      tags: undefined,
+      hedge: undefined,
+      maxStalenessSeconds: undefined,
+      minWireVersion: undefined
+    },
+    retryReads: true,
+    retryWrites: true,
+    serverSelectionTimeoutMS: 30000,
+    socketTimeoutMS: 0,
+    srvMaxHosts: 0,
+    srvServiceName: 'mongodb',
+    writeConcern: WriteConcern { w: 'majority' },
+    waitQueueTimeoutMS: 0,
+    zlibCompressionLevel: 0,
+    dbName: 'test',
+    userSpecifiedAuthSource: false,
+    userSpecifiedReplicaSet: false,
+    srvHost: 'cluster0.ruueiiq.mongodb.net',
+    tls: true,
+    replicaSet: 'atlas-ljid84-shard-0'
+  }
+}
+Collection {
+  s: {
+    db: Db { s: [Object] },
+    options: {
+      raw: false,
+      promoteLongs: true,
+      promoteValues: true,
+      promoteBuffers: false,
+      ignoreUndefined: false,
+      bsonRegExp: false,
+      serializeFunctions: false,
+      fieldsAsRaw: {},
+      enableUtf8Validation: true,
+      writeConcern: [WriteConcern],
+      readPreference: [ReadPreference]
+    },
+    namespace: MongoDBNamespace { db: 'simon', collection: 'user' },
+    pkFactory: { createPk: [Function: createPk] },
+    readPreference: ReadPreference {
+      mode: 'primary',
+      tags: undefined,
+      hedge: undefined,
+      maxStalenessSeconds: undefined,
+      minWireVersion: undefined
+    },
+    bsonOptions: {
+      raw: false,
+      promoteLongs: true,
+      promoteValues: true,
+      promoteBuffers: false,
+      ignoreUndefined: false,
+      bsonRegExp: false,
+      serializeFunctions: false,
+      fieldsAsRaw: {},
+      enableUtf8Validation: true
+    },
+    readConcern: undefined,
+    writeConcern: WriteConcern { w: 'majority' }
+  }
+}
+{ email: 't@t.com', password: 't' }
+<ref *1> MongoClient {
+  _events: [Object: null prototype] {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  s: {
+    url: 'mongodb+srv://dallynsmith00:BKjYGmYBK6UCJayX@cluster0.ruueiiq.mongodb.net/?retryWrites=true&w=majority',
+    bsonOptions: {
+      raw: false,
+      promoteLongs: true,
+      promoteValues: true,
+      promoteBuffers: false,
+      ignoreUndefined: false,
+      bsonRegExp: false,
+      serializeFunctions: false,
+      fieldsAsRaw: {},
+      enableUtf8Validation: true
+    },
+    namespace: MongoDBNamespace { db: 'admin', collection: undefined },
+    hasBeenClosed: false,
+    sessionPool: ServerSessionPool { client: [Circular *1], sessions: [List] },
+    activeSessions: Set(0) {},
+    options: [Getter],
+    readConcern: [Getter],
+    writeConcern: [Getter],
+    readPreference: [Getter],
+    logger: [Getter],
+    isMongoClient: [Getter]
+  },
+  topology: Topology {
+    _events: [Object: null prototype] {
+      topologyDescriptionChanged: [Array],
+      connectionPoolCreated: [Function (anonymous)],
+      connectionPoolReady: [Function (anonymous)],
+      connectionPoolCleared: [Function (anonymous)],
+      connectionPoolClosed: [Function (anonymous)],
+      connectionCreated: [Function (anonymous)],
+      connectionReady: [Function (anonymous)],
+      connectionClosed: [Function (anonymous)],
+      connectionCheckOutStarted: [Function (anonymous)],
+      connectionCheckOutFailed: [Function (anonymous)],
+      connectionCheckedOut: [Function (anonymous)],
+      connectionCheckedIn: [Function (anonymous)],
+      commandStarted: [Function (anonymous)],
+      commandSucceeded: [Function (anonymous)],
+      commandFailed: [Function (anonymous)],
+      serverOpening: [Function (anonymous)],
+      serverClosed: [Function (anonymous)],
+      serverDescriptionChanged: [Function (anonymous)],
+      topologyOpening: [Function (anonymous)],
+      topologyClosed: [Function (anonymous)],
+      error: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      close: [Function (anonymous)],
+      serverHeartbeatStarted: [Function (anonymous)],
+      serverHeartbeatSucceeded: [Function (anonymous)],
+      serverHeartbeatFailed: [Function (anonymous)]
+    },
+    _eventsCount: 26,
+    _maxListeners: undefined,
+    selectServerAsync: [Function (anonymous)],
+    bson: [Object: null prototype] {
+      serialize: [Function: serialize],
+      deserialize: [Function: deserialize]
+    },
+    s: {
+      id: 0,
+      options: [Object: null prototype],
+      seedlist: [Array],
+      state: 'connected',
+      description: [TopologyDescription],
+      serverSelectionTimeoutMS: 30000,
+      heartbeatFrequencyMS: 10000,
+      minHeartbeatFrequencyMS: 500,
+      servers: [Map],
+      credentials: [MongoCredentials],
+      clusterTime: [Object],
+      connectionTimers: Set(0) {},
+      detectShardedTopology: [Function: detectShardedTopology],
+      detectSrvRecords: [Function: detectSrvRecords],
+      srvPoller: [SrvPoller]
+    },
+    client: [Circular *1],
+    [Symbol(kCapture)]: false,
+    [Symbol(waitQueue)]: List { count: 0, head: [Object] }
+  },
+  [Symbol(kCapture)]: false,
+  [Symbol(options)]: [Object: null prototype] {
+    hosts: [
+      new HostAddress('ac-nhjj8oc-shard-00-00.ruueiiq.mongodb.net:27017'),
+      new HostAddress('ac-nhjj8oc-shard-00-02.ruueiiq.mongodb.net:27017'),
+      new HostAddress('ac-nhjj8oc-shard-00-01.ruueiiq.mongodb.net:27017')
+    ],
+    credentials: MongoCredentials {
+      username: 'dallynsmith00',
+      password: 'BKjYGmYBK6UCJayX',
+      source: 'admin',
+      mechanism: 'DEFAULT',
+      mechanismProperties: {}
+    },
+    compressors: [ 'none' ],
+    connectTimeoutMS: 30000,
+    directConnection: false,
+    metadata: {
+      driver: [Object],
+      os: [Object],
+      platform: 'Node.js v16.15.1, LE (unified)|Node.js v16.15.1, LE (unified)'
+    },
+    enableUtf8Validation: true,
+    forceServerObjectId: false,
+    heartbeatFrequencyMS: 10000,
+    keepAlive: true,
+    keepAliveInitialDelay: 120000,
+    loadBalanced: false,
+    localThresholdMS: 15,
+    logger: Logger { className: 'MongoClient' },
+    maxConnecting: 2,
+    maxIdleTimeMS: 0,
+    maxPoolSize: 100,
+    minPoolSize: 0,
+    minHeartbeatFrequencyMS: 500,
+    monitorCommands: false,
+    noDelay: true,
+    pkFactory: { createPk: [Function: createPk] },
+    raw: false,
+    readPreference: ReadPreference {
+      mode: 'primary',
+      tags: undefined,
+      hedge: undefined,
+      maxStalenessSeconds: undefined,
+      minWireVersion: undefined
+    },
+    retryReads: true,
+    retryWrites: true,
+    serverSelectionTimeoutMS: 30000,
+    socketTimeoutMS: 0,
+    srvMaxHosts: 0,
+    srvServiceName: 'mongodb',
+    writeConcern: WriteConcern { w: 'majority' },
+    waitQueueTimeoutMS: 0,
+    zlibCompressionLevel: 0,
+    dbName: 'test',
+    userSpecifiedAuthSource: false,
+    userSpecifiedReplicaSet: false,
+    srvHost: 'cluster0.ruueiiq.mongodb.net',
+    tls: true,
+    replicaSet: 'atlas-ljid84-shard-0'
+  }
+}
+Collection {
+  s: {
+    db: Db { s: [Object] },
+    options: {
+      raw: false,
+      promoteLongs: true,
+      promoteValues: true,
+      promoteBuffers: false,
+      ignoreUndefined: false,
+      bsonRegExp: false,
+      serializeFunctions: false,
+      fieldsAsRaw: {},
+      enableUtf8Validation: true,
+      writeConcern: [WriteConcern],
+      readPreference: [ReadPreference]
+    },
+    namespace: MongoDBNamespace { db: 'simon', collection: 'user' },
+    pkFactory: { createPk: [Function: createPk] },
+    readPreference: ReadPreference {
+      mode: 'primary',
+      tags: undefined,
+      hedge: undefined,
+      maxStalenessSeconds: undefined,
+      minWireVersion: undefined
+    },
+    bsonOptions: {
+      raw: false,
+      promoteLongs: true,
+      promoteValues: true,
+      promoteBuffers: false,
+      ignoreUndefined: false,
+      bsonRegExp: false,
+      serializeFunctions: false,
+      fieldsAsRaw: {},
+      enableUtf8Validation: true
+    },
+    readConcern: undefined,
+    writeConcern: WriteConcern { w: 'majority' }
+  }
+}
+{
+  _id: new ObjectId("640e61c8dc2021a04853faf3"),
+  email: 't@t.com',
+  password: '$2b$10$qDh2ClNxczDbdw82jgFNBO9KTvNM8rUWyS0BKt8xFh/xrns2CcSNy',
+  token: 'e7fb9990-e720-4e48-b712-fcbf976d1a4e'
+}
+in set cookie
+e7fb9990-e720-4e48-b712-fcbf976d1a4e

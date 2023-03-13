@@ -1,23 +1,28 @@
 {
-  "name": "simon",
+  "name": "simon-login",
   "version": "1.0.0",
-  "description": "This deliverable demonstrates the use of basic HTML elements for structure, basic formatting, input, output, links, and drawing.",
+  "description": "This demonstrates creating an HTTP service that provides service endpoints. We use this to provide endpoints for getting and updating the scores.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsterner30/simon.git"
+    "url": "git+https://github.com/webprogramming260/simon-login.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jsterner30/simon/issues"
+    "url": "https://github.com/webprogramming260/simon-login/issues"
   },
-  "homepage": "https://github.com/jsterner30/simon#readme",
+  "homepage": "https://github.com/webprogramming260/simon-login#readme",
   "dependencies": {
+    "axios": "^1.3.4",
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "mongodb": "^5.1.0"
+    "mongodb": "^4.12.0",
+    "uuid": "^9.0.0"
   }
 }
