@@ -16,10 +16,8 @@ const client = new MongoClient(url);
 const userCollection = client.db('simon').collection('user');
 const scoreCollection = client.db('simon').collection('score');
 
-async function getUser(email) {
-  log(client)
-  log(userCollection)
-  return await userCollection.findOne({ email: email })
+function getUser(email) {
+  return userCollection.findOne({ email: email });
 }
 
 function getUserByToken(token) {
@@ -36,7 +34,7 @@ async function createUser(email, password) {
     token: uuid.v4(),
   };
   await userCollection.insertOne(user);
-  log(user)
+
   return user;
 }
 
@@ -60,14 +58,4 @@ module.exports = {
   createUser,
   addScore,
   getHighScores,
-};
-
-var fs = require('fs');
-var util = require('util');
-var log_file = fs.createWriteStream(__dirname + '/debug.log', {flags : 'w'});
-var log_stdout = process.stdout;
-
-log = function(d) { //
-  log_file.write(util.format(d) + '\n');
-  log_stdout.write(util.format(d) + '\n');
 };

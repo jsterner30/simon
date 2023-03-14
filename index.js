@@ -3,15 +3,12 @@ const bcrypt = require('bcrypt');
 const express = require('express');
 const app = express();
 const DB = require('./database.js');
-const cors = require('cors');
+const { PeerProxy } = require('./peerProxy.js');
 
 const authCookieName = 'token';
 
-try {
 // The service port may be set on the command line
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
-
-app.use(cors());
 
 // JSON body parsing using built-in middleware
 app.use(express.json());
@@ -26,14 +23,8 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
-apiRouter.get('/health', (req, res) => {
-  console.log('ttttt')
-  return res.status(200).send({ msg: 'OK' });
-});
-
 // CreateAuth token for a new user
 apiRouter.post('/auth/create', async (req, res) => {
-  log(req.body)
   if (await DB.getUser(req.body.email)) {
     res.status(409).send({ msg: 'Existing user' });
   } else {
@@ -42,7 +33,7 @@ apiRouter.post('/auth/create', async (req, res) => {
     // Set the cookie
     setAuthCookie(res, user.token);
 
-    res.status(200).send({
+    res.send({
       id: user._id,
     });
   }
@@ -50,9 +41,7 @@ apiRouter.post('/auth/create', async (req, res) => {
 
 // GetAuth token for the provided credentials
 apiRouter.post('/auth/login', async (req, res) => {
-  log(req.body)
   const user = await DB.getUser(req.body.email);
-  log(user)
   if (user) {
     if (await bcrypt.compare(req.body.password, user.password)) {
       setAuthCookie(res, user.token);
@@ -85,10 +74,7 @@ var secureApiRouter = express.Router();
 apiRouter.use(secureApiRouter);
 
 secureApiRouter.use(async (req, res, next) => {
-  log('in auth')
-  log(req.cookies)
-  log(req.cookies.token)
-  authToken = req.cookies[authCookieName];
+  const authToken = req.cookies[authCookieName];
   const user = await DB.getUserByToken(authToken);
   if (user) {
     next();
@@ -99,7 +85,6 @@ secureApiRouter.use(async (req, res, next) => {
 
 // GetScores
 secureApiRouter.get('/scores', async (req, res) => {
-  log("in route")
   const scores = await DB.getHighScores();
   res.send(scores);
 });
@@ -123,8 +108,6 @@ app.use((_req, res) => {
 
 // setAuthCookie in the HTTP response
 function setAuthCookie(res, authToken) {
-  log('in set cookie')
-  log(authToken)
   res.cookie(authCookieName, authToken, {
     secure: true,
     httpOnly: true,
@@ -132,18 +115,8 @@ function setAuthCookie(res, authToken) {
   });
 }
 
-app.listen(port, () => {
-  log(`Listening on port ${port}`);
+const httpService = app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
-} catch (err) {
-    log(err);
-}
-var fs = require('fs');
-var util = require('util');
-var log_file = fs.createWriteStream(__dirname + '/debug.log', {flags : 'w'});
-var log_stdout = process.stdout;
 
-log = function(d) { //
-  log_file.write(util.format(d) + '\n');
-  log_stdout.write(util.format(d) + '\n');
-};
+new PeerProxy(httpService);
